@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'StarWarsFont';
+    src: url('./Starjedi.ttf') format('truetype');
+}
+
+body {
+    font-family: 'StarWarsFont', Fallback, sans-serif;
+}
+
+input {
+    font-family: 'StarWarsFont', Fallback, sans-serif;;
+}
+
+button {
+    font-family: 'StarWarsFont', Fallback, sans-serif;;
+}
+
+.background {
+    background: url(sky.jpeg) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    color: whitesmoke;
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    top: 5px;
+}
+
+.welcome_screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-height: 1000px) {
+    .welcome_screen {
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+}
+
+#title {
+    text-align: center;
+    color: #f9d71c;
+    font-size: calc(12px + 1vh + 0.5vw);
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    color: inherit;
+    font-size: calc(10px + 1.5vh);
+    padding: 10px;
+}
+
+.list {
+    background: rgba(128, 128, 128, 0.28);
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.list_element {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: calc(7px + 1vh);
+}
+
+.button {
+    font-size: calc(10px + 1vw);
+    color: whitesmoke;
+    padding: 20px 20px;
+    transition: all 0.3s ease-out;
+    border: 2px solid whitesmoke;
+    background-color: transparent;
+    border-radius: 20px/50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgba(128, 128, 128, 0.45);
+}
+
+#scores {
+    margin: 20px;
+    padding: 20px 100px;
+}
+
+#scores div {
+    margin: 10px;
+}
+
+#start_button {
+    margin: 30px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: visible;
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.popup {
+    margin: auto;
+    padding: 40px;
+    background: #f5edef;
+    background: url(sky.jpeg) no-repeat;
+    background-size: cover;
+    border: 2px solid whitesmoke;
+    border-radius: 20px/50px;
+    color: whitesmoke;
+    min-width: 40%;
+    max-height: 80%;
+    max-width: 80%;
+    transition: all 5s ease-in-out;
+    visibility: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: calc(20px + 2vw);
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+.popup .close:hover {
+    color: whitesmoke;
+}
+
+.popup .close:focus {
+    color: whitesmoke;
+    outline: 0;
+}
+
+#login_box {
+    margin: 30px;
+    font-size: calc(10px + 1vw);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+.info_tab {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 96%;
+    min-height: 16%;
+    color: #f9d71c;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 30vw/70vh;
+    margin: 2%;
+}
+
+.main_tab {
+    height: 78%;
+}
+
+.lists {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scrolling {
+    background-color: transparent;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+}
+
+.planet_button {
+    font-size: calc(10px + 0.5vw);
+    margin: 5px auto;
+    min-width:90%;
+}
+
+.ship_button {
+    font-size: calc(10px + 0.5vw);
+    width:  100%;
+}
+
+.info_in_travel:before {
+    content: "W Drodze Do ";
+    margin-right: 2px;
+}
+
+.lists .list {
+    margin-bottom:30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#planets_list {
+    padding: 10px 20px;
+    width: 40%;
+}
+
+#ships_list {
+    padding: 10px 20px;
+    min-width: 40%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .lists {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .scrolling {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+.material {
+    border-collapse: collapse;
+    text-align: center;
+    border-spacing: 20px;
+}
+
+.material th{
+    color: #f9d71c;
+    margin-right: 4px;
+}
+
+.material tr{
+    border-bottom: 1px solid whitesmoke;
+}
+
+
+
+#ships_on_planet button {
+    margin-bottom: 10px;
+
+}
+
+.slider{
+    width: 250px;
+    height: 2px;
+    opacity: 0.7;
+    outline: none;
+}
+
+.slider:hover{
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.chosen_number{
+    width:50px;
+    font-size: 20px;
+    margin-bottom: 14px;
+    -moz-appearance:textfield;
+}
+
+.submit_button {
+   background-color: transparent;
+    color: whitesmoke;
+    font-size: 33px;
+    border: none;
+}
+
+.submit_button:hover{
+    opacity: 0.5;
+}

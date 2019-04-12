@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Kosmiczny handlarz</title>
+</head>
+<body>
+<div class="background">
+    <div id="player_info" class="info_tab">
+        <div>
+            <p class="header">Andrzej</p>
+        </div>
+        <div>
+            <p class="header">Stan konta: 100</p>
+        </div>
+        <div>
+            <p class="header">Czas: 5 sec</p>
+        </div>
+    </div>
+    <div class="lists main_tab">
+        <div id="planets_list" class="list">
+            <h1 class="header">Planety</h1>
+            <div class="list scrolling">
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Alderaan</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Argoland</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Arrakis</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Corellia</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Encja</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Gaia</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Ksi</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Leonida</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">NowWhat</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Sur'Kesh</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Tairia</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Tatooine</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Tuchanka</button>
+                </div>
+                <div class="list_element">
+                    <button class="planet_button button" onclick="openPlanet()">Ziemia</button>
+                </div>
+            </div>
+        </div>
+        <div id="ships_list" class="list">
+            <h1 class="header">Statki</h1>
+            <div class="list scrolling">
+                <table>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipInTravel()">Axiom</button>
+                        </td>
+                        <td><p class="info_in_travel">Tatooine</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Enterprise</button>
+                        </td>
+                        <td><p class="info_on_planet">Corellia</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Goliath</button>
+                        </td>
+                        <td><p class="info_on_planet">Sur'Kesh</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Hermes</button>
+                        </td>
+                        <td><p class="info_on_planet">NowWhat</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Millenium Falcon</button>
+                        </td>
+                        <td><p class="info_on_planet">Tatooine</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Niezwyciezony</button>
+                        </td>
+                        <td><p class="info_on_planet">Argolan</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Normandy SR-2</button>
+                        </td>
+                        <td><p class="info_on_planet">Gaia</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Nostromo</button>
+                        </td>
+                        <td><p class="info_on_planet">Arraki</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Rocinante</button>
+                        </td>
+                        <td><p class="info_on_planet">Alderaa</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="ship_button button" onclick="openShipOnPlanet()">Космонавт Алексе́й Лео́нов
+                            </button>
+                        </td>
+                        <td><p class="info_on_planet">Arrakis</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="planet_info" class="overlay hide" onclick="closePopUp()">
+    <div class="popup">
+        <input type="button" class="close" value="&times;">
+        <div class="info_tab">
+            <div>
+                <p class="header">Alderaan</p>
+            </div>
+            <div>
+                <p class="header">Pozycja (15,32)</p>
+            </div>
+        </div>
+        <div class="lists main_tab">
+            <div class="list">
+                <h1 class="header">Surowce</h1>
+                <div class="list scrolling">
+                    <table class="material">
+                        <tr>
+                            <th>Surowiec</th>
+                            <th>ilosc</th>
+                            <th>sprzedaz</th>
+                            <th>kupno</th>
+                        </tr>
+                        <tr>
+                            <td>Cynamon</td>
+                            <td>74</td>
+                            <td>6</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Dwimeryt</td>
+                            <td>42</td>
+                            <td>12</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Nuka-Cola</td>
+                            <td>34</td>
+                            <td>13</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Proteański dyski</td>
+                            <td>5</td>
+                            <td>76</td>
+                            <td>69</td>
+                        </tr>
+                        <tr>
+                            <td>Unobtainium</td>
+                            <td>23</td>
+                            <td>33</td>
+                            <td>31</td>
+                        </tr>
+                        <tr>
+                            <td>Woda</td>
+                            <td>22</td>
+                            <td>19</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>ziemniaki</td>
+                            <td>10</td>
+                            <td>92</td>
+                            <td>86</td>
+                        </tr>
+                        <tr>
+                            <td>zoto</td>
+                            <td>12</td>
+                            <td>19</td>
+                            <td>17</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="ships_on_planet" class="list">
+                <h1 class="header">Ships</h1>
+                <div class="list scrolling">
+                    <div class="list_element">
+                        <button class="ship_button button" onclick="openShipOnPlanet()">Nostromo</button>
+                    </div>
+                    <div class="list_element">
+                        <button class="ship_button button" onclick="openShipOnPlanet()">Niezwyciezony</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ship_info" class="overlay hide" onclick="closePopUp()">
+    <div class="popup">
+        <input type="button" class="close" value="&times;">
+        <div class="info_tab">
+            <p class="header">Nostromom</p>
+            <p class="header">Alderaan</p>
+            <p class="header">Ladunek: 20/100</p>
+        </div>
+        <div class="lists main_tab">
+            <div class="list">
+                <h1 class="header">Surowce</h1>
+                <div class="list scrolling">
+                    <table class="material">
+                        <tr>
+                            <th>Surowiec</th>
+                            <th>stan</th>
+                        </tr>
+                        <tr>
+                            <td>Cynamon</td>
+                            <td>74</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>Dwimeryt</td>
+                            <td>42</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nuka-Cola</td>
+                            <td>34</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Proteański dyski</td>
+                            <td>5</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Unobtainium</td>
+                            <td>23</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Woda</td>
+                            <td>22</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ziemniaki</td>
+                            <td>10</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zloto</td>
+                            <td>12</td>
+                            <td class="forTrade">
+                                <form>
+                                    <input type="range" class="slider" name="amountRange" min="-74" max="100" value="74"
+                                           oninput="this.form.amountInput.value=this.value"/>
+                                    <input type="number" class="chosen_number" name="amountInput" min="-74" max="100"
+                                           value="74"
+                                           oninput="this.form.amountRange.value=this.value"/>
+                                    <button type="submit" class="submit_button"><i class="fas fa-money-bill-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openPlanet() {
+
+        const popup = document.getElementById("planet_info");
+        popup.classList.remove('hide');
+    }
+
+    function openShipInTravel() {
+        var for_Trade = document.getElementsByClassName('forTrade');
+
+        for (i = 0; i < for_Trade.length; i++) {
+            for_Trade[i].style.display = 'none';
+        }
+        const popup = document.getElementById("ship_info");
+        popup.classList.remove('hide');
+
+
+    }
+
+    function openShipOnPlanet() {
+        var for_Trade = document.getElementsByClassName('forTrade');
+        for (i = 0; i < for_Trade.length; i++) {
+            for_Trade[i].style.display = 'block';
+        }
+        const popup = document.getElementById("ship_info");
+        popup.classList.remove('hide');
+    }
+
+    function closePopUp() {
+        if (event.target.classList.contains("close")) {
+            event.currentTarget.classList.add('hide');
+        }
+    }
+
+</script>
+</body>
+</html>
