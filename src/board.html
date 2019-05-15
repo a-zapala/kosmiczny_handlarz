@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl-PL" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -374,13 +374,12 @@
 
 <script>
     function openPlanet() {
-
         const popup = document.getElementById("planet_info");
         popup.classList.remove('hide');
     }
 
     function openShipInTravel() {
-        var for_Trade = document.getElementsByClassName('forTrade');
+        let for_Trade  = document.getElementsByClassName('forTrade');
 
         for (i = 0; i < for_Trade.length; i++) {
             for_Trade[i].style.display = 'none';

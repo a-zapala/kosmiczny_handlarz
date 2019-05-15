@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Kosmiczny handlarz</title>
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/init.js"></script>
+</head>
+
+<body>
+<main class="background welcome_screen">
+    <h1 id="title">Kosmiczny Handlarz</h1>
+    <h2 class="header">Ranking</h2>
+    <div id="scores" class="list">
+    </div>
+    <button id="start_button" class="button" onclick="openLogin()">zagraj</button>
+</main>
+
+<div id="start_popup" class="overlay hide" onclick="closePopUp(event)">
+    <div class="popup">
+        <h2 class="header">Wpisz swój pseudonim</h2>
+        <input type="button" class="close" value="&times;">
+        <input type="text" id="login_box"/>
+        <a class="button" href="board.html">Graj</a>
+    </div>
+</div>
+
+<script>
+</script>
+</body>
+</html>

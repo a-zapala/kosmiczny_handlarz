@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'StarWarsFont';
-    src: url('./Starjedi.ttf') format('truetype');
+    src: url('../media/Starjedi.ttf') format('truetype');
 }
 
 body {
@@ -16,7 +16,7 @@ button {
 }
 
 .background {
-    background: url(sky.jpeg) no-repeat;
+    background: url(../media/sky.jpeg) no-repeat;
     background-size: cover;
     border-radius: 20px;
     color: whitesmoke;
@@ -125,7 +125,7 @@ button {
     margin: auto;
     padding: 40px;
     background: #f5edef;
-    background: url(sky.jpeg) no-repeat;
+    background: url(../media/sky.jpeg) no-repeat;
     background-size: cover;
     border: 2px solid whitesmoke;
     border-radius: 20px/50px;
