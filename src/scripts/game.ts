@@ -216,8 +216,8 @@ class View {
 
             row.appendChild(it_name);
             row.appendChild(it_avail);
-            row.appendChild(it_buy_price);
             row.appendChild(it_sell_price);
+            row.appendChild(it_buy_price);
             new_tbody.appendChild(row);
         }
         old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
@@ -263,7 +263,7 @@ class View {
 
         let desc_lab: HTMLParagraphElement = document.querySelector('#ship_info .ship_desc');
         if (ship.inWay) {
-            desc_lab.textContent = "Go to " + ship.planet.name;
+            desc_lab.textContent = "W drodze do " + ship.planet.name;
         } else {
             desc_lab.textContent = ship.planet.name;
         }
@@ -312,18 +312,14 @@ class View {
     }
 
     moveShip(ship: Ship) {
-        let rows: NodeListOf<Element> = document.querySelectorAll("#ships_list button");
-        for (let i = 0; i < rows.length; i++) {
-            if (rows[i].textContent == ship.name) {
-                let desc = rows[i].parentElement.nextElementSibling;
-                if (ship.inWay) {
-                    desc.textContent = "Go to " + ship.planet.name;
-                } else {
-                    desc.textContent = ship.planet.name;
-                }
-                break;
-            }
+        let pos_label: HTMLParagraphElement = document.querySelector("#main_" + ship.name + " p");
+
+        if (ship.inWay) {
+            pos_label.textContent = "W drodze do " + ship.planet.name;
+        } else {
+            pos_label.textContent = ship.planet.name;
         }
+
     }
 
     createItemForm(item_name: string, ship: Ship, planet: Planet): HTMLFormElement {
@@ -349,7 +345,7 @@ class View {
         number.setAttribute("type", "number");
         number.setAttribute("class", "chosen_number");
         number.setAttribute("item_name", item_name);
-        number.setAttribute("ship_name", ship.name);
+        number.setAttribute("id", item_name + "_input");
         number.setAttribute("name", "amountInput");
         number.setAttribute("min", min_val.toString());
         number.setAttribute("max", max_val.toString());
@@ -359,6 +355,7 @@ class View {
 
         let button: HTMLButtonElement = document.createElement('button');
         button.setAttribute("type", "submit");
+        button.setAttribute("id", item_name + "_submit");
         button.setAttribute("class", "submit_button");
         let icon: HTMLElement = document.createElement('i');
         icon.classList.add('fas', 'fa-money-bill-alt');
@@ -464,11 +461,11 @@ class Controller {
     }
 
     timer() {
-        view.setTime();
         if (game.current_time == 0) {
             controller.endGame();
         }
         game.current_time--;
+        view.setTime();
         game.refreshShipsPosition();
         controller.tick();
     }
@@ -493,7 +490,7 @@ class RankList {
 
     constructor(reset: boolean) {
         let init_string: string;
-        if (reset) {
+        if (reset || localStorage.getItem("rank_list") === null) {
             init_string = `[
                                 {
                                   "nick": "Magdalena",

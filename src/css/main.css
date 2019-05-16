@@ -323,3 +323,8 @@ form {
 table {
     width: 100%;
 }
+
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -1,0 +1,449 @@
+{
+  "id": "7da20a11-79be-42b3-ac3b-6e3e8a3cc18b",
+  "version": "2.0",
+  "name": "kosmiczny_handlarz",
+  "url": "http://students.mimuw.edu.pl/~az386481/src/board.html",
+  "tests": [{
+    "id": "9659cf43-ecfb-4601-aa4e-a036ebccae33",
+    "name": "Login",
+    "commands": [{
+      "id": "60250e99-58ec-4b2a-8681-0fe1188b011d",
+      "comment": "",
+      "command": "open",
+      "target": "/~az386481/src/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f3bdb16-b4d4-4c9c-b1d1-8e4c380d0f34",
+      "comment": "",
+      "command": "click",
+      "target": "id=start_button",
+      "targets": [
+        ["id=start_button", "id"],
+        ["css=#start_button", "css:finder"],
+        ["xpath=//button[@id='start_button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'zagraj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c38a045-8ad2-421d-acc2-ff55fb848935",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_box",
+      "targets": [
+        ["id=login_box", "id"],
+        ["css=#login_box", "css:finder"],
+        ["xpath=//input[@id='login_box']", "xpath:attributes"],
+        ["xpath=//div[@id='start_popup']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "882298f1-d894-44f8-a3c5-b76328ff1fd9",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_box",
+      "targets": [
+        ["id=login_box", "id"],
+        ["css=#login_box", "css:finder"],
+        ["xpath=//input[@id='login_box']", "xpath:attributes"],
+        ["xpath=//div[@id='start_popup']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Andrzej"
+    }, {
+      "id": "b02f5c51-619c-4f87-9261-41c9ec978ab7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Graj",
+      "targets": [],
+      "value": "100"
+    }, {
+      "id": "9dfe0201-614b-4b11-94a8-d6cf30d321c1",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=nick",
+      "targets": [],
+      "value": "Andrzej"
+    }]
+  }, {
+    "id": "0a3791a1-d1f9-4745-ba3b-01888ed6dd35",
+    "name": "CloseLogin",
+    "commands": [{
+      "id": "d176eab0-9603-4faa-9f7d-5e210dcd38a7",
+      "comment": "",
+      "command": "open",
+      "target": "/~az386481/src/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23cd2596-8152-4bef-ba6e-6688d60bf0b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=start_button",
+      "targets": [
+        ["id=start_button", "id"],
+        ["css=#start_button", "css:finder"],
+        ["xpath=//button[@id='start_button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'zagraj')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db25503b-d1de-4b49-b7fc-7afbe622c1e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close",
+      "targets": [
+        ["css=.close", "css:finder"],
+        ["xpath=//input[@value='×']", "xpath:attributes"],
+        ["xpath=//div[@id='start_popup']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e89bd118-5b7f-47c2-81e3-f716ce261c53",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "id=login_box",
+      "targets": [
+        ["id=login_box", "id"],
+        ["css=#login_box", "css:finder"],
+        ["xpath=//input[@id='login_box']", "xpath:attributes"],
+        ["xpath=//div[@id='start_popup']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "100"
+    }]
+  }, {
+    "id": "59b81d58-f81f-4e13-92ff-f2dba5ae67a4",
+    "name": "TimeFlow",
+    "commands": [{
+      "id": "b3679520-5641-4447-858a-a02c8d5ef3d0",
+      "comment": "",
+      "command": "open",
+      "target": "/~az386481/src/board.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a508aea9-540d-49a6-823a-c29af148569f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=time",
+      "targets": [
+        ["id=time", "id"],
+        ["css=#time", "css:finder"],
+        ["xpath=//p[@id='time']", "xpath:attributes"],
+        ["xpath=//div[@id='player_info']/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Czas: 294 sec')]", "xpath:innerText"]
+      ],
+      "value": "Czas: 300 sec"
+    }, {
+      "id": "7b33cfaa-38ae-483c-98f8-eaca40c9db9f",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1b21951-5bfb-4a9c-acdf-2c94a70635d9",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=time",
+      "targets": [
+        ["id=time", "id"],
+        ["css=#time", "css:finder"],
+        ["xpath=//p[@id='time']", "xpath:attributes"],
+        ["xpath=//div[@id='player_info']/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Czas: 294 sec')]", "xpath:innerText"]
+      ],
+      "value": "Czas: 299 sec"
+    }]
+  }, {
+    "id": "505d7613-9024-4889-b0ab-3d6ea06a4fd4",
+    "name": "TimeOfTravel",
+    "commands": [{
+      "id": "180e2e2d-6f9f-4b9a-b0e1-0a2ff4d4ba23",
+      "comment": "",
+      "command": "open",
+      "target": "http://students.mimuw.edu.pl/~az386481/src/board.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56419177-faac-49cf-8a89-870e77f0a2d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#main_Axiom .ship_button",
+      "targets": [
+        ["css=#main_Axiom .ship_button", "css:finder"],
+        ["xpath=//tr[@id='main_Axiom']/td/button", "xpath:idRelative"],
+        ["xpath=//td/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Axiom')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3acdf340-3ea0-47f8-ad3b-d68655b1334f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#main_Axiom .info_on_planet",
+      "targets": [
+        ["css=#main_Axiom .info_on_planet", "css:finder"],
+        ["xpath=//tr[@id='main_Axiom']/td[2]/p", "xpath:idRelative"],
+        ["xpath=//td[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Tatooine')]", "xpath:innerText"]
+      ],
+      "value": "Tatooine"
+    }, {
+      "id": "ed6fd01b-2c83-4236-a583-38ff69b8046e",
+      "comment": "",
+      "command": "click",
+      "target": "id=go_Alderaan",
+      "targets": [
+        ["id=go_Alderaan", "id"],
+        ["css=#go_Alderaan", "css:finder"],
+        ["xpath=//button[@id='go_Alderaan']", "xpath:attributes"],
+        ["xpath=//div[@id='planet_to_go']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83666a6d-e0ed-44a3-bfcc-379fa6cac400",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.ship_desc",
+      "targets": [
+        ["css=.ship_desc", "css:finder"],
+        ["xpath=//div[@id='ship_info']/div/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'W drodze do Alderaan')]", "xpath:innerText"]
+      ],
+      "value": "W drodze do Alderaan"
+    }, {
+      "id": "31441cf7-1680-4838-bdd6-806d8e52a813",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ship_info .close",
+      "targets": [
+        ["css=#ship_info .close", "css:finder"],
+        ["xpath=(//input[@value='×'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ship_info']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f4d8712-d456-4d74-8450-d3cffe2761af",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#main_Axiom .info_on_planet",
+      "targets": [
+        ["css=#main_Axiom .info_on_planet", "css:finder"],
+        ["xpath=//tr[@id='main_Axiom']/td[2]/p", "xpath:idRelative"],
+        ["xpath=//td[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Tatooine')]", "xpath:innerText"]
+      ],
+      "value": "W drodze do Alderaan"
+    }, {
+      "id": "83d42e33-3c0f-44f1-9993-c46976227efd",
+      "comment": "",
+      "command": "pause",
+      "target": "46000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b4b8250-a083-4a80-b11d-8024d9ddaca8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#main_Axiom .info_on_planet",
+      "targets": [
+        ["css=#main_Axiom .info_on_planet", "css:finder"],
+        ["xpath=//tr[@id='main_Axiom']/td[2]/p", "xpath:idRelative"],
+        ["xpath=//td[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Tatooine')]", "xpath:innerText"]
+      ],
+      "value": "W drodze do Alderaan"
+    }, {
+      "id": "a06e1d23-aab2-4ea1-abfc-a068f7d0356a",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0d05c01-f518-4cc3-aad3-35fefb675865",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#main_Axiom .info_on_planet",
+      "targets": [
+        ["css=#main_Axiom .info_on_planet", "css:finder"],
+        ["xpath=//tr[@id='main_Axiom']/td[2]/p", "xpath:idRelative"],
+        ["xpath=//td[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Tatooine')]", "xpath:innerText"]
+      ],
+      "value": "Alderaan"
+    }]
+  }, {
+    "id": "f98185eb-82a8-4031-a796-f2aa66e7ad6b",
+    "name": "Trade",
+    "commands": [{
+      "id": "93df3da0-3eb5-4014-8ff0-0b031177dce8",
+      "comment": "",
+      "command": "open",
+      "target": "http://students.mimuw.edu.pl/~az386481/src/board.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5ae5f58-e558-4c73-89c6-01d6f7bd7a7a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=balance",
+      "targets": [
+        ["id=balance", "id"],
+        ["css=#balance", "css:finder"],
+        ["xpath=//p[@id='balance']", "xpath:attributes"],
+        ["xpath=//div[@id='player_info']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'2090')]", "xpath:innerText"]
+      ],
+      "value": "2343"
+    }, {
+      "id": "627a42c3-371c-4e55-a29e-288301c7e660",
+      "comment": "",
+      "command": "click",
+      "target": "id=main_Alderaan",
+      "targets": [
+        ["id=main_Alderaan", "id"],
+        ["css=#main_Alderaan", "css:finder"],
+        ["xpath=//button[@id='main_Alderaan']", "xpath:attributes"],
+        ["xpath=//div[@id='planets_list']/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Alderaan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c452003-f6fd-4918-953a-f1835ad16bdc",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#planet_info tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=#planet_info tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='planet_info']/div/div[2]/div/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'19')]", "xpath:innerText"]
+      ],
+      "value": "42"
+    }, {
+      "id": "17caff0e-61f3-4273-a0fa-ad63b56841f1",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#planet_info tr:nth-child(2) > td:nth-child(3)",
+      "targets": [
+        ["css=#planet_info tr:nth-child(2) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='planet_info']/div/div[2]/div/div/table/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'12')]", "xpath:innerText"]
+      ],
+      "value": "11"
+    }, {
+      "id": "712d34a8-466d-4e7c-a038-02d1ceb65a53",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list_element > .ship_button",
+      "targets": [
+        ["css=.list_element > .ship_button", "css:finder"],
+        ["xpath=//div[@id='ships_on_planet']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e7a355a-4762-4cc1-9a62-1202c82afe1c",
+      "comment": "",
+      "command": "click",
+      "target": "id=Dwimeryt_input",
+      "targets": [
+        ["id=Dwimeryt_input", "id"],
+        ["name=amountInput", "name"],
+        ["css=#Dwimeryt_input", "css:finder"],
+        ["xpath=//input[@id='Dwimeryt_input']", "xpath:attributes"],
+        ["xpath=//div[@id='ship_info']/div/div[2]/div/div/table/tbody/tr/td[3]/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04db6fe6-990a-42b4-b564-99b50533a43b",
+      "comment": "",
+      "command": "type",
+      "target": "id=Dwimeryt_input",
+      "targets": [
+        ["id=Dwimeryt_input", "id"],
+        ["name=amountInput", "name"],
+        ["css=#Dwimeryt_input", "css:finder"],
+        ["xpath=//input[@id='Dwimeryt_input']", "xpath:attributes"],
+        ["xpath=//div[@id='ship_info']/div/div[2]/div/div/table/tbody/tr/td[3]/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "23"
+    }, {
+      "id": "1add5eb2-6eb5-437d-b1bd-390e6f2e7e27",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Dwimeryt_submit > .fas",
+      "targets": [
+        ["css=#Dwimeryt_submit > .fas", "css:finder"],
+        ["xpath=//button[@id='Dwimeryt_submit']/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e72900d6-569e-4107-8718-55884a8edc81",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ship_info .close",
+      "targets": [
+        ["css=#ship_info .close", "css:finder"],
+        ["xpath=(//input[@value='×'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='ship_info']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c67679b9-3ac7-4d16-a566-a3b61930bd0c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#planet_info tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=#planet_info tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='planet_info']/div/div[2]/div/div/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/table/tbody/tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'19')]", "xpath:innerText"]
+      ],
+      "value": "19"
+    }, {
+      "id": "14d04f0e-4130-47c5-926d-0d9fa3321522",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=balance",
+      "targets": [
+        ["id=balance", "id"],
+        ["css=#balance", "css:finder"],
+        ["xpath=//p[@id='balance']", "xpath:attributes"],
+        ["xpath=//div[@id='player_info']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'2090')]", "xpath:innerText"]
+      ],
+      "value": "2090"
+    }]
+  }],
+  "suites": [{
+    "id": "40844b6c-233a-4024-b0cd-2ea51416f6ae",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9659cf43-ecfb-4601-aa4e-a036ebccae33"]
+  }],
+  "urls": ["http://students.mimuw.edu.pl/", "http://students.mimuw.edu.pl/~az386481/src", "http://students.mimuw.edu.pl/~az386481/src/board.html"],
+  "plugins": []
+}
