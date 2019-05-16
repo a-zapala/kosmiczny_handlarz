@@ -207,12 +207,12 @@ form {
 .planet_button {
     font-size: calc(10px + 0.5vw);
     margin: 5px auto;
-    min-width:90%;
+    min-width: 90%;
 }
 
 .ship_button {
     font-size: calc(10px + 0.5vw);
-    width:  100%;
+    width: 100%;
 }
 
 .info_in_travel:before {
@@ -221,7 +221,7 @@ form {
 }
 
 .lists .list {
-    margin-bottom:30px;
+    margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -258,15 +258,14 @@ form {
     border-spacing: 20px;
 }
 
-.material th{
+.material th {
     color: #f9d71c;
     margin-right: 4px;
 }
 
-.material tr{
+.material tr {
     border-bottom: 1px solid whitesmoke;
 }
-
 
 
 #ships_on_planet button {
@@ -274,14 +273,14 @@ form {
 
 }
 
-.slider{
+.slider {
     width: 250px;
     height: 2px;
     opacity: 0.7;
     outline: none;
 }
 
-.slider:hover{
+.slider:hover {
     opacity: 1;
 }
 
@@ -303,20 +302,24 @@ form {
     cursor: pointer;
 }
 
-.chosen_number{
-    width:50px;
+.chosen_number {
+    width: 50px;
     font-size: 20px;
     margin-bottom: 14px;
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
 
 .submit_button {
-   background-color: transparent;
+    background-color: transparent;
     color: whitesmoke;
     font-size: 33px;
     border: none;
 }
 
-.submit_button:hover{
+.submit_button:hover {
     opacity: 0.5;
+}
+
+table {
+    width: 100%;
 }
