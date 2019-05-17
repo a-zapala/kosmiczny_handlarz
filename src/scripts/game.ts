@@ -218,6 +218,7 @@ class View {
             row.appendChild(it_avail);
             row.appendChild(it_sell_price);
             row.appendChild(it_buy_price);
+
             new_tbody.appendChild(row);
         }
         old_tbody.parentNode.replaceChild(new_tbody, old_tbody);

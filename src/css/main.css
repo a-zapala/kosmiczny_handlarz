@@ -34,7 +34,7 @@ button {
     align-items: center;
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-width: 900px) {
     .welcome_screen {
         justify-content: flex-start;
         overflow-y: auto;
@@ -305,7 +305,6 @@ form {
 .chosen_number {
     width: 50px;
     font-size: 20px;
-    margin-bottom: 14px;
     -moz-appearance: textfield;
 }
 
@@ -327,4 +326,8 @@ table {
 th {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.material tr {
+    height: 60px;
 }
